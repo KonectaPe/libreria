@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/")
 public class PortalControlador {
-    @GetMapping
-    public String index(ModelMap model) {
-        String nombre = "Dev";
-        model.addAttribute("nombre", nombre);
-        return "index.html";
+
+    @GetMapping("/registrar")
+    public String registrar(ModelMap model) {
+        return "registro.html";
     }
 }

@@ -118,7 +118,7 @@
     <div class="container-fluid m-5 contenedor">
       <form
         class="formulario"
-        action="@{/libro/modificar/__${libro?.id}__}"
+        action="@{/libro/modificar/__${libro.isbn}__}"
         method="POST"
       >
         <div
@@ -156,6 +156,7 @@
             class="form-control"
             name="titulo"
             placeholder="Titulo del Libro"
+            th:value="${libro?.title}"
           />
         </div>
 
@@ -165,6 +166,7 @@
             class="form-control"
             name="ejemplares"
             placeholder="Cantidad de Ejemplares"
+            th:value="${libro?.exemplars}"
           />
         </div>
 
